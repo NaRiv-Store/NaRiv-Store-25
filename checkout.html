@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Finalizar compra - NaRiv Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Finalizar Compra</h1>
+    <form id="checkout-form">
+      <label>Nombre completo</label><br>
+      <input type="text" required><br>
+      <label>Email</label><br>
+      <input type="email" required><br>
+      <label>Dirección de entrega</label><br>
+      <input type="text" required><br>
+      <label>Seleccioná método de envío</label><br>
+      <select>
+        <option>Correo Argentino - $1500</option>
+        <option>Retiro en sucursal - Gratis</option>
+        <option>Motomensajería (CABA) - $2000</option>
+      </select><br>
+      <label>Método de pago</label><br>
+      <select id="metodo-pago" onchange="calcularDescuento()">
+        <option value="tarjeta">Tarjeta de crédito/débito</option>
+        <option value="transferencia">Transferencia / Efectivo (10% OFF)</option>
+      </select><br>
+      <p>Total: $<span id="total-pago">0</span></p>
+      <button type="submit">Confirmar compra</button>
+    </form>
+  </div>
+  <script>
+    let totalCompra = localStorage.getItem("total") || 0;
+    function calcularDescuento() {
+      const metodo = document.getElementById("metodo-pago").value;
+      let total = parseFloat(totalCompra);
+      if (metodo === "transferencia") total *= 0.9;
+      document.getElementById("total-pago").innerText = total.toFixed(2);
+    }
+    calcularDescuento();
+    document.getElementById("checkout-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      window.location.href = "gracias.html";
+    });
+  </script>
+</body>
+</html>

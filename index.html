@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NaRiv Store - Tienda de Ropa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+
+<!-- SEO y Favicon -->
+<meta name="description" content="NaRiv Store - Ropa urbana de calidad. Remeras, joggers y buzos. Envíos a todo el país.">
+<meta name="keywords" content="ropa, tienda, remeras, joggers, buzos, moda urbana">
+<meta name="author" content="NaRiv Store">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/814/814513.png" type="image/png">
+
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container">
+    <div class="logo">NaRiv Store</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="#catalogo">Tienda</a>
+      <a href="como-comprar.html">Cómo Comprar</a>
+      <a href="faq.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="banner">
+  <img src="https://images.unsplash.com/photo-1593032457869-e09cda46b6f2?auto=format&fit=crop&w=1200&q=80" alt="Banner">
+</section>
+
+<!-- Categorías -->
+<section class="categorias">
+  <h2>Categorías</h2>
+  <div class="category-buttons">
+    <button onclick="filtrarCategoria('remera')">Remeras</button>
+    <button onclick="filtrarCategoria('pantalones')">Pantalones Jogger</button>
+    <button onclick="filtrarCategoria('buzos')">Buzos</button>
+    <button onclick="filtrarCategoria('todo')">Ver todo</button>
+  </div>
+</section>
+
+<!-- Catálogo -->
+<main id="catalogo" class="product-grid">
+  <div class="product" data-categoria="remera">
+    <img src="https://images.unsplash.com/photo-1618354691263-4be3a4c705f9?auto=format&fit=crop&w=600&q=80" alt="Remera">
+    <h2>Remera Oversize Estampada</h2>
+    <p>$8.500</p>
+    <button onclick="addToCart('Remera Oversize Estampada', 8500)">Agregar al carrito</button>
+  </div>
+  <div class="product" data-categoria="pantalones">
+    <img src="https://images.unsplash.com/photo-1602810316213-c0f4bff14a4d?auto=format&fit=crop&w=600&q=80" alt="Jogger">
+    <h2>Pantalón Jogger Negro</h2>
+    <p>$12.000</p>
+    <button onclick="addToCart('Pantalón Jogger Negro', 12000)">Agregar al carrito</button>
+  </div>
+  <div class="product" data-categoria="buzos">
+    <img src="https://images.unsplash.com/photo-1520975918311-7f61d4dc018a?auto=format&fit=crop&w=600&q=80" alt="Buzo">
+    <h2>Buzo Canguro Gris</h2>
+    <p>$14.000</p>
+    <button onclick="addToCart('Buzo Canguro Gris', 14000)">Agregar al carrito</button>
+  </div>
+</main>
+
+<!-- Carrito -->
+<aside class="cart" id="cart">
+  <h3>Tu carrito</h3>
+  <ul id="cart-items"></ul>
+  <p>Total: $<span id="cart-total">0</span></p>
+  <a id="checkout-btn" href="#" class="btn">Finalizar compra por WhatsApp</a>
+</aside>
+
+<!-- WhatsApp flotante -->
+<a class="whatsapp-float" href="https://wa.me/5491138893335" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<footer>
+  <p>© 2025 NaRiv Store - Todos los derechos reservados</p>
+</footer>
+
+
+<!-- Chat en Vivo (Tawk.to) -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/65400043f2439e1631eb6f6b/1hdqsqhf1';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+</body>
+</html>

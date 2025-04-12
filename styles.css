@@ -1,0 +1,99 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.main-header {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+}
+.categorias {
+  padding: 20px;
+  text-align: center;
+}
+.category-buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+.product {
+  width: 300px;
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.product h2 {
+  font-size: 1em;
+  margin: 10px 0;
+}
+.product p {
+  font-weight: bold;
+}
+.product button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.cart {
+  position: fixed;
+  right: -300px;
+  top: 60px;
+  width: 280px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  transition: right 0.3s;
+}
+.cart.visible {
+  right: 0;
+}
+.cart-icon {
+  cursor: pointer;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.whatsapp-float img {
+  width: 50px;
+}
+footer {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
